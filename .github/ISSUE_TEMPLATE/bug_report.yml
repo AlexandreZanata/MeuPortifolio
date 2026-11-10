@@ -1,0 +1,27 @@
+name: Bug report
+description: Something on the site is broken, inaccessible or wrong.
+labels: [bug]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: URL of the page where it happens.
+      placeholder: https://alexandrezanata.com.br/en/projects/
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens, and what you expected
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, device and assistive technology
+      placeholder: Safari 26 on iPhone, VoiceOver
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or steps to reproduce

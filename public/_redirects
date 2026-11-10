@@ -1,0 +1,4 @@
+# Redirect rules for static hosts that read this file (Cloudflare Pages, Netlify).
+# The root sends Portuguese-speaking visitors to /pt-br/ and everyone else to /en/.
+/   /pt-br/   302   Language=pt
+/   /en/      302

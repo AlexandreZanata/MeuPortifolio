@@ -1,0 +1,225 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens. The palette and radii are reset on purpose: only the values listed here
+ * exist as utilities, so off-system colours cannot slip into a component.
+ * Rationale and usage rules: docs/DESIGN_SYSTEM.md
+ */
+@theme {
+  --color-*: initial;
+  --color-paper: #f5f0e6;
+  --color-paper-raised: #fbf8f1;
+  --color-paper-sunken: #ebe4d5;
+  --color-ink: #17130e;
+  --color-ink-soft: #3a342b;
+  --color-ink-muted: #625a4e;
+  --color-rule: #d6cdbb;
+  --color-rule-strong: #8c816b;
+  --color-accent: #b8430b;
+  --color-accent-strong: #8f3207;
+  --color-accent-on-ink: #ef8a4f;
+
+  --font-display:
+    var(--font-fraunces), 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+  --font-sans:
+    var(--font-instrument), ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:
+    var(--font-jetbrains), ui-monospace, 'SF Mono', 'Cascadia Mono', Menlo, Consolas, monospace;
+
+  /* Fluid type scale: sizes interpolate between a 375px and a 1440px viewport. */
+  --text-display-1: clamp(2.5rem, 1.3rem + 5.2vw, 5.5rem);
+  --text-display-1--line-height: 1;
+  --text-display-1--letter-spacing: -0.022em;
+  --text-display-2: clamp(2.25rem, 1.5rem + 3.2vw, 4.25rem);
+  --text-display-2--line-height: 1.03;
+  --text-display-2--letter-spacing: -0.02em;
+  --text-title-1: clamp(1.875rem, 1.45rem + 1.8vw, 3rem);
+  --text-title-1--line-height: 1.08;
+  --text-title-1--letter-spacing: -0.015em;
+  --text-title-2: clamp(1.5rem, 1.32rem + 0.8vw, 2rem);
+  --text-title-2--line-height: 1.15;
+  --text-title-2--letter-spacing: -0.01em;
+  --text-title-3: 1.25rem;
+  --text-title-3--line-height: 1.3;
+  --text-title-3--letter-spacing: -0.004em;
+  --text-lede: clamp(1.125rem, 1.04rem + 0.36vw, 1.3125rem);
+  --text-lede--line-height: 1.55;
+  --text-base: 1rem;
+  --text-base--line-height: 1.65;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.55;
+  --text-label: 0.75rem;
+  --text-label--line-height: 1.4;
+  --text-label--letter-spacing: 0.09em;
+
+  --radius-*: initial;
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  --shadow-*: initial;
+
+  --ease-editorial: cubic-bezier(0.2, 0, 0, 1);
+
+  --animate-rise: rise 700ms var(--ease-editorial) both;
+  --animate-fade: fade 180ms ease-out both;
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(0.75rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --gutter: clamp(1.25rem, 0.55rem + 3vw, 3.5rem);
+    --section: clamp(4.5rem, 3rem + 6vw, 9rem);
+    --header-height: 4.25rem;
+  }
+
+  html {
+    /* Keeps anchor targets and focused elements clear of the sticky header (WCAG 2.4.11). */
+    scroll-padding-top: calc(var(--header-height) + 1.5rem);
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    /* A faint paper grain. It is a single tiled SVG filter, so it costs no network request. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .09 0 0 0 0 .075 0 0 0 0 .055 .11 0 0 0 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li,
+  dd {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: var(--radius-xs);
+  }
+
+  /* Programmatic focus on <main> after the skip link should not draw a ring around the page. */
+  main:focus {
+    outline: none;
+  }
+
+  dialog::backdrop {
+    background-color: rgb(23 19 14 / 0.45);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  @media print {
+    body {
+      background: #fff;
+    }
+  }
+}
+
+/* Page container: one max width and one gutter for the whole site. */
+@utility container-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 84rem;
+  padding-inline: var(--gutter);
+}
+
+/* Vertical rhythm between major page sections. */
+@utility section-space {
+  padding-block: var(--section);
+}
+
+/* Small-caps monospace label used for eyebrows, indices, captions and metadata. */
+@utility label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  line-height: var(--text-label--line-height);
+  letter-spacing: var(--text-label--letter-spacing);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Display serif with the optical settings headlines need. */
+@utility display {
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-variation-settings: 'wght' 560;
+  font-feature-settings:
+    'kern',
+    'liga',
+    'ss01' 0;
+}
+
+/* The italic display face, falling back to a slanted roman Fraunces (see hero-font.ts). */
+@utility display-italic {
+  font-family: var(--font-fraunces-italic), var(--font-display);
+  font-style: italic;
+}
+
+/* Inline link: a hairline underline that thickens and takes the accent on hover. */
+@utility link {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.22em;
+  text-decoration-color: var(--color-rule-strong);
+  transition:
+    color 160ms var(--ease-editorial),
+    text-decoration-color 160ms var(--ease-editorial);
+
+  &:hover {
+    color: var(--color-accent);
+    text-decoration-color: currentColor;
+  }
+}

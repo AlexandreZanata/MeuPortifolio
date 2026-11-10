@@ -1,0 +1,47 @@
+name: Refresh GitHub snapshot
+
+# Repository facts shown on the site (licence, last update, latest release) come from a
+# committed snapshot, never from the API at build time. This job refreshes it weekly and
+# proposes the change as a pull request, so nothing reaches the site unreviewed.
+
+on:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+      # The script has no dependencies: it is plain Node with the built-in fetch.
+      - run: node scripts/update-github-snapshot.ts
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Propose the change
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Ignore a snapshot whose only difference is its timestamp.
+          if git diff --quiet -I'"generatedAt"' -- src/content/github/snapshot.json; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -C chore/github-snapshot
+          git commit -am "chore(content): refresh GitHub snapshot"
+          git push --force origin chore/github-snapshot
+          # Pull requests opened with the default token do not start other workflows:
+          # push an empty commit or re-run CI by hand before merging.
+          gh pr create --title "chore(content): refresh GitHub snapshot" \
+            --body "Automated weekly refresh of \`src/content/github/snapshot.json\`." \
+            || echo "A pull request for this branch is already open."

@@ -1,0 +1,17 @@
+name: Content correction
+description: A fact, a translation or a link is wrong or out of date.
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should change
+      description: Quote the current text and give the corrected version. A source helps.
+    validations:
+      required: true

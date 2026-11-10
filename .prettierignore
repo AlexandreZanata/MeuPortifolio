@@ -1,0 +1,12 @@
+.next
+out
+node_modules
+pnpm-lock.yaml
+coverage
+playwright-report
+test-results
+public/art
+src/content/github/snapshot.json
+.lighthouseci
+public/og
+src/assets/fonts

@@ -1,0 +1,38 @@
+{
+  "ci": {
+    "collect": {
+      "startServerCommand": "node scripts/serve-static.ts",
+      "startServerReadyPattern": "Serving out/",
+      "numberOfRuns": 3,
+      "url": [
+        "http://localhost:4173/en/",
+        "http://localhost:4173/pt-br/",
+        "http://localhost:4173/en/projects/",
+        "http://localhost:4173/en/projects/opencnpj/",
+        "http://localhost:4173/en/open-source/",
+        "http://localhost:4173/en/lab/",
+        "http://localhost:4173/en/about/",
+        "http://localhost:4173/en/contact/",
+        "http://localhost:4173/en/resume/"
+      ]
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": [
+          "error",
+          { "minScore": 0.95, "aggregationMethod": "median-run" }
+        ],
+        "categories:accessibility": ["error", { "minScore": 1 }],
+        "categories:best-practices": ["error", { "minScore": 1 }],
+        "categories:seo": ["error", { "minScore": 1 }],
+        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.02 }],
+        "largest-contentful-paint": ["warn", { "maxNumericValue": 2500 }],
+        "total-blocking-time": ["warn", { "maxNumericValue": 200 }]
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": ".lighthouseci"
+    }
+  }
+}

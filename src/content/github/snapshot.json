@@ -1,0 +1,146 @@
+{
+  "generatedAt": "2026-11-09T21:02:32.635Z",
+  "repositories": {
+    "AlexandreZanata/OpenCNPJ": {
+      "url": "https://github.com/AlexandreZanata/OpenCNPJ",
+      "description": "Open-source toolkit for downloading, parsing and transforming official Receita Federal CNPJ datasets into structured databases. Designed to simplify access to Brazilian company registration data for analytics, validation, search engines, dashboards and business intelligence applications.",
+      "license": "MIT",
+      "stars": 0,
+      "forks": 1,
+      "archived": false,
+      "createdAt": "2026-02-12T11:24:01Z",
+      "pushedAt": "2026-11-09T19:07:23Z",
+      "latestRelease": null
+    },
+    "open-data-brazil/br-validators": {
+      "url": "https://github.com/open-data-brazil/br-validators",
+      "description": "MIT · The Brazilian data toolkit for TypeScript — validate 18 document types and query 17 government datasets (IBGE, Bacen, CNAE, NCM, CFOP, Incoterms…) entirely offline. Zero runtime deps, tree-shakeable, never throws.",
+      "license": "MIT",
+      "stars": 8,
+      "forks": 2,
+      "archived": false,
+      "createdAt": "2026-06-21T15:39:53Z",
+      "pushedAt": "2026-11-09T11:11:51Z",
+      "latestRelease": {
+        "tag": "v1.10.1-data.40",
+        "publishedAt": "2026-11-09T11:17:39Z",
+        "url": "https://github.com/open-data-brazil/br-validators/releases/tag/v1.10.1-data.40"
+      }
+    },
+    "AlexandreZanata/TBG-Tupi-Battle-Grounds": {
+      "url": "https://github.com/AlexandreZanata/TBG-Tupi-Battle-Grounds",
+      "description": "TBG — Tupi Battle Grounds: a real-time 1v1 mobile strategy game with no micromanagement — automatic combat on a single lane, unit evolution, and faction synergies.",
+      "license": null,
+      "stars": 2,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-06-30T13:22:39Z",
+      "pushedAt": "2026-11-09T19:57:42Z",
+      "latestRelease": null
+    },
+    "AlexandreZanata/Abastevo": {
+      "url": "https://github.com/AlexandreZanata/Abastevo",
+      "description": "⛽ Open-source platform helping drivers across Brazil compare fuel prices using official ANP data and community-powered updates. Find stations, track prices, and save on every fill-up.",
+      "license": null,
+      "stars": 1,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-09-28T15:15:49Z",
+      "pushedAt": "2026-11-09T18:04:39Z",
+      "latestRelease": null
+    },
+    "open-data-brazil/br-validators-rust": {
+      "url": "https://github.com/open-data-brazil/br-validators-rust",
+      "description": "🦀 High-performance Rust port of BR Validators — open-source validation and formatting of Brazilian documents (CPF, CNPJ, PIX, etc.) with offline public data lookups.",
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-04T11:41:36Z",
+      "pushedAt": "2026-11-09T19:10:10Z",
+      "latestRelease": {
+        "tag": "v0.1.2",
+        "publishedAt": "2026-11-06T11:49:19Z",
+        "url": "https://github.com/open-data-brazil/br-validators-rust/releases/tag/v0.1.2"
+      }
+    },
+    "open-data-brazil/open-data-agro": {
+      "url": "https://github.com/open-data-brazil/open-data-agro",
+      "description": "A curated collection of official Brazilian agricultural open datasets, standardized and ready to use. This repository aggregates data from trusted public sources such as MAPA, IBGE, CONAB, Embrapa, INMET, ANA, and other government institutions, making it easier for developers, researchers, companies, and the open-source community to build data-driv",
+      "license": "MIT",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-06-25T13:44:10Z",
+      "pushedAt": "2026-11-09T11:02:07Z",
+      "latestRelease": null
+    },
+    "AlexandreZanata/brazil-fuel-prices-app": {
+      "url": "https://github.com/AlexandreZanata/brazil-fuel-prices-app",
+      "description": "Open-source Android app for ANP fuel price surveys in Brazil — search 5,500+ cities, pick any week, works offline. Kotlin, Compose, Room, WorkManager.",
+      "license": "MIT",
+      "stars": 1,
+      "forks": 1,
+      "archived": false,
+      "createdAt": "2026-06-18T19:23:06Z",
+      "pushedAt": "2026-09-21T17:47:27Z",
+      "latestRelease": {
+        "tag": "v3.1.0",
+        "publishedAt": "2026-06-23T19:01:55Z",
+        "url": "https://github.com/AlexandreZanata/brazil-fuel-prices-app/releases/tag/v3.1.0"
+      }
+    },
+    "AlexandreZanata/SorriPrecos": {
+      "url": "https://github.com/AlexandreZanata/SorriPrecos",
+      "description": "SorriPreços — Comparador open source de preços de supermercados em Sorriso-MT. Encontre os menores preços, compare ofertas e economize nas compras. Kotlin Multiplatform + Rust + SQLite.",
+      "license": "MIT",
+      "stars": 1,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-11-03T13:34:54Z",
+      "pushedAt": "2026-11-09T18:59:21Z",
+      "latestRelease": null
+    },
+    "AlexandreZanata/UrnaPack": {
+      "url": "https://github.com/AlexandreZanata/UrnaPack",
+      "description": "dados eleitorais abertos, compactados e verificáveis",
+      "license": "MIT",
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-10-28T12:52:52Z",
+      "pushedAt": "2026-11-08T15:32:31Z",
+      "latestRelease": {
+        "tag": "suite-estatistica-2026-v1",
+        "publishedAt": "2026-10-31T23:57:51Z",
+        "url": "https://github.com/AlexandreZanata/UrnaPack/releases/tag/suite-estatistica-2026-v1"
+      }
+    },
+    "AlexandreZanata/CelularLinuxADB": {
+      "url": "https://github.com/AlexandreZanata/CelularLinuxADB",
+      "description": "Digite 'run cell' no terminal e espelhe o Android no Linux (adb + scrcpy). Instalação em 1 comando, .deb e doctor.",
+      "license": null,
+      "stars": 1,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2025-09-17T01:20:56Z",
+      "pushedAt": "2026-11-09T18:17:49Z",
+      "latestRelease": {
+        "tag": "v1.0.1",
+        "publishedAt": "2026-11-09T18:17:49Z",
+        "url": "https://github.com/AlexandreZanata/CelularLinuxADB/releases/tag/v1.0.1"
+      }
+    },
+    "AlexandreZanata/full-sales-web-system": {
+      "url": "https://github.com/AlexandreZanata/full-sales-web-system",
+      "description": "Rust backend for field sales & inventory control — driver-facing sales tracking, stock management, and cryptographically signed reports. DDD + hexagonal architecture, PostgreSQL 18 (UUIDv7), Redis.",
+      "license": null,
+      "stars": 0,
+      "forks": 0,
+      "archived": false,
+      "createdAt": "2026-07-04T15:59:16Z",
+      "pushedAt": "2026-07-23T13:23:10Z",
+      "latestRelease": null
+    }
+  }
+}
