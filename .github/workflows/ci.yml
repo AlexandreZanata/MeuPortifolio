@@ -36,7 +36,7 @@ jobs:
         run: |
           pnpm art
           git diff --exit-code -- public/art
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: site
           path: out
@@ -61,7 +61,7 @@ jobs:
           path: out
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm test:e2e
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
@@ -85,7 +85,7 @@ jobs:
       # Lab scores vary with the runner, so the thresholds in lighthouserc.json leave a
       # small margin on performance and none on the other categories.
       - run: npx --yes @lhci/cli@0.15.x autorun
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
         with:
           name: lighthouse-reports
