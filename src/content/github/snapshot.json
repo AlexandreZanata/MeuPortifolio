@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T21:02:32.635Z",
+  "generatedAt": "2026-11-23T18:02:33.543Z",
   "repositories": {
     "AlexandreZanata/OpenCNPJ": {
       "url": "https://github.com/AlexandreZanata/OpenCNPJ",
@@ -9,22 +9,22 @@
       "forks": 1,
       "archived": false,
       "createdAt": "2026-02-12T11:24:01Z",
-      "pushedAt": "2026-11-09T19:07:23Z",
+      "pushedAt": "2026-11-11T11:07:20Z",
       "latestRelease": null
     },
     "open-data-brazil/br-validators": {
       "url": "https://github.com/open-data-brazil/br-validators",
       "description": "MIT · The Brazilian data toolkit for TypeScript — validate 18 document types and query 17 government datasets (IBGE, Bacen, CNAE, NCM, CFOP, Incoterms…) entirely offline. Zero runtime deps, tree-shakeable, never throws.",
       "license": "MIT",
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "archived": false,
       "createdAt": "2026-06-21T15:39:53Z",
-      "pushedAt": "2026-11-09T11:11:51Z",
+      "pushedAt": "2026-11-23T13:01:10Z",
       "latestRelease": {
-        "tag": "v1.10.1-data.40",
-        "publishedAt": "2026-11-09T11:17:39Z",
-        "url": "https://github.com/open-data-brazil/br-validators/releases/tag/v1.10.1-data.40"
+        "tag": "v1.10.1-data.54",
+        "publishedAt": "2026-11-23T12:23:18Z",
+        "url": "https://github.com/open-data-brazil/br-validators/releases/tag/v1.10.1-data.54"
       }
     },
     "AlexandreZanata/TBG-Tupi-Battle-Grounds": {
@@ -35,18 +35,18 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-06-30T13:22:39Z",
-      "pushedAt": "2026-11-09T19:57:42Z",
+      "pushedAt": "2026-11-15T17:43:02Z",
       "latestRelease": null
     },
     "AlexandreZanata/Abastevo": {
       "url": "https://github.com/AlexandreZanata/Abastevo",
-      "description": "⛽ Open-source platform helping drivers across Brazil compare fuel prices using official ANP data and community-powered updates. Find stations, track prices, and save on every fill-up.",
+      "description": "Open-source platform helping drivers across Brazil compare fuel prices using official ANP data and community-powered updates. Find stations, track prices, and save on every fill-up.",
       "license": null,
-      "stars": 1,
+      "stars": 2,
       "forks": 0,
       "archived": false,
       "createdAt": "2026-09-28T15:15:49Z",
-      "pushedAt": "2026-11-09T18:04:39Z",
+      "pushedAt": "2026-11-23T17:56:40Z",
       "latestRelease": null
     },
     "open-data-brazil/br-validators-rust": {
@@ -57,11 +57,11 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-11-04T11:41:36Z",
-      "pushedAt": "2026-11-09T19:10:10Z",
+      "pushedAt": "2026-11-23T13:18:57Z",
       "latestRelease": {
-        "tag": "v0.1.2",
-        "publishedAt": "2026-11-06T11:49:19Z",
-        "url": "https://github.com/open-data-brazil/br-validators-rust/releases/tag/v0.1.2"
+        "tag": "v0.1.18",
+        "publishedAt": "2026-11-23T13:29:33Z",
+        "url": "https://github.com/open-data-brazil/br-validators-rust/releases/tag/v0.1.18"
       }
     },
     "open-data-brazil/open-data-agro": {
@@ -72,7 +72,7 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-06-25T13:44:10Z",
-      "pushedAt": "2026-11-09T11:02:07Z",
+      "pushedAt": "2026-11-23T11:53:14Z",
       "latestRelease": null
     },
     "AlexandreZanata/brazil-fuel-prices-app": {
@@ -109,7 +109,7 @@
       "forks": 0,
       "archived": false,
       "createdAt": "2026-10-28T12:52:52Z",
-      "pushedAt": "2026-11-08T15:32:31Z",
+      "pushedAt": "2026-11-18T21:25:29Z",
       "latestRelease": {
         "tag": "suite-estatistica-2026-v1",
         "publishedAt": "2026-10-31T23:57:51Z",
